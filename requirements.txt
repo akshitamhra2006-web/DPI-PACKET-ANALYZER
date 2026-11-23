@@ -1,0 +1,7 @@
+# Deep Packet Inspection & Packet Analyzer — Python Dependencies
+# Target Release: v5.5.0-FINAL
+# Standard minimal footprint: numpy, scikit-learn, joblib
+
+numpy>=1.24.0
+scikit-learn>=1.3.0
+joblib>=1.3.0

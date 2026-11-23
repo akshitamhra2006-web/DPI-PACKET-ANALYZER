@@ -1,0 +1,3 @@
+detection_id,detector,category,severity,timestamp_us,source_ip,destination_ip,protocol,flow_count,primary_metric,explanation
+DET-REPEAT-3201a8c0-18bcfe683c8-1,repeated_attempts_detector,SUSPICIOUS_CONNECTION_ATTEMPT,LOW,1700000072648016,192.168.1.50,172.217.0.100,TCP,5,"5 attempts (100% incomplete)","Source host made 5 repeated connection attempts to 172.217.0.100:443 with a high rate of uncompleted handshakes."
+DET-TCP-SYN-3201a8c0-18bcfe68e1e-1,tcp_anomaly_detector,PROTOCOL_ANOMALY,MEDIUM,1700000075294920,192.168.1.50,MULTIPLE,TCP,5,"5/5 SYN-heavy flows (100%)","Source host exhibited a SYN-heavy communication pattern where 5 out of 5 TCP flows initiated connections without receiving or completing handshakes."

@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "model_name": "NIDS-RandomForest",
+  "version": "2.0.0",
+  "algorithm": "random_forest",
+  "artifact_file": "NIDS-RandomForest_2.0.0.joblib",
+  "sha256": "58cb85c415cc0f8484c6dae8285c07c2d4d191bd2157b010ef27f807c1dfc46a",
+  "is_trained": true,
+  "metadata": {
+    "model_name": "NIDS-RandomForest",
+    "version": "2.0.0",
+    "algorithm": "random_forest",
+    "trained_at": "2026-11-23T02:53:38Z",
+    "train_duration_seconds": 0.0688,
+    "samples_trained": 92,
+    "feature_count": 24,
+    "classes": [
+      "BENIGN",
+      "C2_BEACON",
+      "DNS_TUNNEL",
+      "MALWARE_HTTP",
+      "PORT_SCAN"
+    ],
+    "feature_importances": {
+      "duration_seconds": 0.0182,
+      "total_packets": 0.029,
+      "total_bytes": 0.055,
+      "packets_per_second": 0.0384,
+      "bytes_per_second": 0.057,
+      "byte_asymmetry_ratio": 0.0727,
+      "packet_asymmetry_ratio": 0.0163,
+      "fwd_packets": 0.0152,
+      "fwd_bytes": 0.0443,
+      "rev_packets": 0.0467,
+      "rev_bytes": 0.0818,
+      "pkt_size_min": 0.0395,
+      "pkt_size_max": 0.0802,
+      "pkt_size_mean": 0.1046,
+      "pkt_size_stddev": 0.0291,
+      "iat_mean": 0.015,
+      "iat_stddev": 0.0139,
+      "fwd_syn_count": 0.0442,
+      "fwd_ack_count": 0.0705,
+      "fwd_fin_count": 0.0317,
+      "fwd_rst_count": 0.0,
+      "fwd_psh_count": 0.0243,
+      "is_well_known_port": 0.0725,
+      "is_ephemeral_port": 0.0
+    },
+    "dataset_info": {
+      "dataset_id": "PCAP-DERIVED-FLOWS-v1",
+      "samples": 92,
+      "schema": "2.0.0"
+    }
+  }
+}

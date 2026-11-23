@@ -1,0 +1,64 @@
+[
+  {
+    "schema_version": "1.0",
+    "detection_id": "DET-REPEAT-3201a8c0-18bcfe683c8-1",
+    "detector": "repeated_attempts_detector",
+    "category": "SUSPICIOUS_CONNECTION_ATTEMPT",
+    "severity": "LOW",
+    "timestamp_us": 1700000072648016,
+    "timestamp_iso": "2023-11-14T22:14:32.648Z",
+    "source_ip": "192.168.1.50",
+    "destination_ip": "172.217.0.100",
+    "protocol": "TCP",
+    "relevant_ports": [443],
+    "related_flow_ids": [4294967304, 12884901892, 4294967305, 8, 8589934598],
+    "evidence": {
+      "attempts_count": "5",
+      "fail_ratio": "1.000000",
+      "failed_count": "5",
+      "observed_metric": "5 attempts (100% incomplete)",
+      "threshold": "5"
+    },
+    "explanation": "Source host made 5 repeated connection attempts to 172.217.0.100:443 with a high rate of uncompleted handshakes.",
+    "limitations": [
+      "Offline PCAPs with asymmetric routes or capture point filters may omit legitimate server ACK responses.",
+      "Legitimate network services retrying during brief outages can produce this pattern."
+    ],
+    "recommended_actions": [
+      "Verify target service operational status and port availability.",
+      "Assess whether repeated connection attempts stem from misconfigured application retry loops."
+    ],
+    "detection_method": "deterministic_behavioral_rule"
+  },
+  {
+    "schema_version": "1.0",
+    "detection_id": "DET-TCP-SYN-3201a8c0-18bcfe68e1e-1",
+    "detector": "tcp_anomaly_detector",
+    "category": "PROTOCOL_ANOMALY",
+    "severity": "MEDIUM",
+    "timestamp_us": 1700000075294920,
+    "timestamp_iso": "2023-11-14T22:14:35.294Z",
+    "source_ip": "192.168.1.50",
+    "destination_ip": "MULTIPLE",
+    "protocol": "TCP",
+    "relevant_ports": [],
+    "related_flow_ids": [8, 4294967305, 4294967304, 8589934598, 12884901892],
+    "evidence": {
+      "observed_metric": "5/5 SYN-heavy flows (100%)",
+      "syn_heavy_flows": "5",
+      "syn_ratio": "1.000000",
+      "threshold_ratio": "0.850000",
+      "total_tcp_flows": "5"
+    },
+    "explanation": "Source host exhibited a SYN-heavy communication pattern where 5 out of 5 TCP flows initiated connections without receiving or completing handshakes.",
+    "limitations": [
+      "Asymmetric network capture taps where reply traffic travels over a different route can cause false SYN-heavy classifications.",
+      "Active firewall drops on network boundaries can result in unacknowledged SYNs."
+    ],
+    "recommended_actions": [
+      "Verify TAP/SPAN port mirroring coverage to ensure bidirectional packet capture.",
+      "Examine source host for potential SYN flood or port scanning activity."
+    ],
+    "detection_method": "deterministic_behavioral_rule"
+  }
+]

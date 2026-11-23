@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPI & Packet Analyzer — Security Intelligence Platform</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h2>DPI Security</h2>
+          <span>Analyzer v4.0</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-item active" data-view="dashboard">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#pcap" class="nav-item" data-view="pcap">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span>PCAP Analysis</span>
+        </a>
+        <a href="#flows" class="nav-item" data-view="flows">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Flow Explorer</span>
+        </a>
+        <a href="#detections" class="nav-item" data-view="detections">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Detections</span>
+        </a>
+        <a href="#incidents" class="nav-item" data-view="incidents">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Incidents</span>
+        </a>
+        <a href="#threats" class="nav-item" data-view="threats">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Threat Intel</span>
+        </a>
+        <a href="#graph" class="nav-item" data-view="graph">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="16.5"/><line x1="8.5" y1="16.5" x2="15.5" y2="7.5"/></svg>
+          <span>Network Graph</span>
+        </a>
+        <a href="#analytics" class="nav-item" data-view="analytics">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span>Traffic Analytics</span>
+        </a>
+        <a href="#investigations" class="nav-item" data-view="investigations">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Investigations</span>
+        </a>
+        <a href="#reports" class="nav-item" data-view="reports">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Reports</span>
+        </a>
+        <a href="#ml-lab" class="nav-item" data-view="ml-lab">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span>ML Model Lab</span>
+        </a>
+        <a href="#ai-analyst" class="nav-item" data-view="ai-analyst">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>AI Security Analyst</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="engine-status">
+          <span class="status-dot online"></span>
+          <span>C++17 Engine Ready</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <!-- Top Navigation Bar -->
+      <header class="top-header">
+        <div class="header-left">
+          <h1 id="page-title">Security Dashboard</h1>
+          <div class="session-pill">
+            <span class="session-label">Session:</span>
+            <span id="session-pcap" class="session-val">test_dpi.pcap</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-secondary" id="btn-refresh">
+            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Refresh
+          </button>
+          <button class="btn btn-primary" id="btn-quick-analyze">
+            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Analyze PCAP
+          </button>
+        </div>
+      </header>
+
+      <!-- View Containers -->
+      <main class="content-body">
+        <!-- 1. DASHBOARD VIEW -->
+        <section id="view-dashboard" class="app-view active">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Total Traffic</span>
+                <span class="metric-badge">Packets</span>
+              </div>
+              <div class="metric-value" id="stat-total-packets">77</div>
+              <div class="metric-sub" id="stat-total-bytes">5.74 KB</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Network Flows</span>
+                <span class="metric-badge">Tracked</span>
+              </div>
+              <div class="metric-value" id="stat-total-flows">27</div>
+              <div class="metric-sub" id="stat-total-endpoints">22 Unique Endpoints</div>
+            </div>
+            <div class="metric-card alert-card">
+              <div class="metric-header">
+                <span class="metric-label">Security Incidents</span>
+                <span class="metric-badge badge-danger">Correlated</span>
+              </div>
+              <div class="metric-value text-danger" id="stat-total-incidents">0</div>
+              <div class="metric-sub" id="stat-high-incidents">0 High / Critical</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Behavioral Alerts</span>
+                <span class="metric-badge badge-warning">Detections</span>
+              </div>
+              <div class="metric-value text-warning" id="stat-total-detections">0</div>
+              <div class="metric-sub" id="stat-signatures-count">0 Signatures Triggered</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">ML Intrusions</span>
+                <span class="metric-badge badge-danger">Classified</span>
+              </div>
+              <div class="metric-value text-danger" id="stat-ml-intrusions">0</div>
+              <div class="metric-sub" id="stat-ml-model-sub">Supervised Random Forest</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-header">
+                <span class="metric-label">Traffic Anomalies</span>
+                <span class="metric-badge badge-warning">Outliers</span>
+              </div>
+              <div class="metric-value text-warning" id="stat-anomalies-count">0</div>
+              <div class="metric-sub" id="stat-anomaly-model-sub">Isolation Forest</div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <div class="card col-span-8">
+              <div class="card-header">
+                <h3>Temporal Traffic Throughput & Alerts</h3>
+                <span class="card-subtitle">Microsecond-precision volume distribution</span>
+              </div>
+              <div class="card-body">
+                <div id="dashboard-temporal-chart" class="chart-container" style="height: 240px;"></div>
+              </div>
+            </div>
+
+            <div class="card col-span-4">
+              <div class="card-header">
+                <h3>Protocol Distribution</h3>
+                <span class="card-subtitle">L7 Application Breakdown</span>
+              </div>
+              <div class="card-body">
+                <div id="protocol-breakdown-list" class="proto-list"></div>
+              </div>
+            </div>
+
+            <div class="card col-span-6">
+              <div class="card-header">
+                <h3>Top Risk Endpoints</h3>
+                <span class="card-subtitle">Ranked by explainable security score</span>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="data-table" id="table-top-endpoints">
+                    <thead>
+                      <tr><th>IP Address</th><th>Role</th><th>Traffic</th><th>Score</th><th>Rating</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-span-6">
+              <div class="card-header">
+                <h3>Recent Correlated Security Incidents</h3>
+                <span class="card-subtitle">Multi-stage evidence timelines</span>
+              </div>
+              <div class="card-body">
+                <div id="dashboard-incidents-list" class="incident-timeline-summary"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. PCAP ANALYSIS WORKSPACE -->
+        <section id="view-pcap" class="app-view">
+          <div class="card">
+            <div class="card-header">
+              <h3>PCAP Analysis Execution Workspace</h3>
+              <span class="card-subtitle">Invoke high-performance C++17 modular DPI pipeline</span>
+            </div>
+            <div class="card-body">
+              <div class="pcap-controls">
+                <div class="form-group">
+                  <label for="input-pcap-path">PCAP Capture File Path:</label>
+                  <input type="text" id="input-pcap-path" class="form-control" value="test_dpi.pcap" placeholder="e.g. test_dpi.pcap or /path/to/capture.pcap">
+                </div>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" id="chk-detect" checked> Behavioral Detection Engine</label>
+                  <label><input type="checkbox" id="chk-incidents" checked> Security Incident Correlation</label>
+                  <label><input type="checkbox" id="chk-signatures" checked> Rule-Based Signatures</label>
+                  <label><input type="checkbox" id="chk-threat-intel" checked> Threat Intelligence Enrichment</label>
+                  <label><input type="checkbox" id="chk-stream-reassembly" checked> TCP Stream Reassembly</label>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-primary btn-lg" id="btn-run-analysis">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Start Full DPI Engine Analysis
+                  </button>
+                </div>
+              </div>
+              <div id="analysis-terminal" class="terminal-log">
+                <div class="log-line text-muted">[System] Ready for capture analysis. Specify PCAP file and click Start.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. FLOW EXPLORER -->
+        <section id="view-flows" class="app-view">
+          <div class="card">
+            <div class="card-header flex-between">
+              <div>
+                <h3>Network Flow Intelligence Explorer</h3>
+                <span class="card-subtitle">Bidirectional stateful flow tracking & Welford statistical features</span>
+              </div>
+              <div class="search-filter-box">
+                <input type="text" id="flow-search" class="form-control form-control-sm" placeholder="Filter by IP, SNI, App...">
+                <select id="flow-proto-filter" class="form-control form-control-sm">
+                  <option value="">All Protocols</option>
+                  <option value="TCP">TCP</option>
+                  <option value="UDP">UDP</option>
+                  <option value="HTTPS">HTTPS / TLS</option>
+                  <option value="HTTP">HTTP</option>
+                  <option value="DNS">DNS</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="data-table" id="table-flows">
+                  <thead>
+                    <tr><th>Flow ID</th><th>Source</th><th>Destination</th><th>App / Protocol</th><th>Packets</th><th>Bytes</th><th>ML Class</th><th>Anomaly Score</th><th>Actions</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="pagination-bar flex-between">
+                <span id="flow-page-info">Showing 1-50</span>
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-secondary" id="btn-prev-page">Prev</button>
+                  <button class="btn btn-sm btn-secondary" id="btn-next-page">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. DETECTION CENTER -->
+        <section id="view-detections" class="app-view">
+          <div class="card">
+            <div class="card-header flex-between">
+              <div>
+                <h3>Behavioral Network Detection Center</h3>
+                <span class="card-subtitle">Deterministic anomalous pattern & scan detection events</span>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-sm btn-secondary filter-det active" data-sev="ALL">All</button>
+                <button class="btn btn-sm btn-secondary filter-det" data-sev="CRITICAL">Critical</button>
+                <button class="btn btn-sm btn-secondary filter-det" data-sev="HIGH">High</button>
+                <button class="btn btn-sm btn-secondary filter-det" data-sev="MEDIUM">Medium</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="data-table" id="table-detections">
+                  <thead>
+                    <tr><th>Detection ID</th><th>Severity</th><th>Category</th><th>Source IP</th><th>Explanation</th><th>Related Flows</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. INCIDENT CENTER -->
+        <section id="view-incidents" class="app-view">
+          <div class="card">
+            <div class="card-header">
+              <h3>Security Incident Correlation & Kill-Chain Analysis</h3>
+              <span class="card-subtitle">Correlated multi-evidence incidents with chronological stage timelines</span>
+            </div>
+            <div class="card-body">
+              <div id="incidents-container" class="incidents-stack"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. THREAT INTEL -->
+        <section id="view-threats" class="app-view">
+          <div class="card">
+            <div class="card-header">
+              <h3>Threat Intelligence & IOC Enrichment Center</h3>
+              <span class="card-subtitle">Indicators of Compromise (IP, CIDR, Domain, SNI, URL) matched in traffic</span>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="data-table" id="table-threat-matches">
+                  <thead>
+                    <tr><th>Event ID</th><th>Severity</th><th>IOC Type</th><th>IOC Value</th><th>Observed Host</th><th>Dataset</th><th>Evidence</th></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. NETWORK GRAPH -->
+        <section id="view-graph" class="app-view">
+          <div class="card">
+            <div class="card-header flex-between">
+              <div>
+                <h3>Interactive Network Relationship Graph</h3>
+                <span class="card-subtitle">Visual topology connecting Endpoints, Domains, Incidents, and IOCs</span>
+              </div>
+              <div class="graph-legend">
+                <span class="legend-item"><span class="legend-color node-endpoint"></span> Endpoint</span>
+                <span class="legend-item"><span class="legend-color node-domain"></span> Domain</span>
+                <span class="legend-item"><span class="legend-color node-incident"></span> Incident</span>
+                <span class="legend-item"><span class="legend-color node-ioc"></span> Threat IOC</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="network-graph-canvas-container" class="graph-viewport">
+                <svg id="network-graph-svg" width="100%" height="540"></svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. TRAFFIC ANALYTICS -->
+        <section id="view-analytics" class="app-view">
+          <div class="dashboard-grid">
+            <div class="card col-span-12">
+              <div class="card-header">
+                <h3>Temporal Packet Rate & Traffic Volume</h3>
+                <span class="card-subtitle">Time-bucketed packets per second and bytes per second</span>
+              </div>
+              <div class="card-body">
+                <div id="analytics-temporal-chart" class="chart-container" style="height: 280px;"></div>
+              </div>
+            </div>
+
+            <div class="card col-span-6">
+              <div class="card-header">
+                <h3>Top Target Destination Ports</h3>
+                <span class="card-subtitle">Resolved service names and flow volumes</span>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="data-table" id="table-analytics-ports">
+                    <thead><tr><th>Port</th><th>Service</th><th>Flow Count</th><th>Bytes</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card col-span-6">
+              <div class="card-header">
+                <h3>TCP Flag Distribution & Behavioral Metrics</h3>
+                <span class="card-subtitle">Flag occurrences and connection state breakdown</span>
+              </div>
+              <div class="card-body">
+                <div id="tcp-flag-breakdown-list" class="proto-list"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. INVESTIGATIONS WORKSPACE -->
+        <section id="view-investigations" class="app-view">
+          <div class="card">
+            <div class="card-header flex-between">
+              <div>
+                <h3>Analyst Investigation Workspaces</h3>
+                <span class="card-subtitle">Cryptographic evidence tracking with FNV-1a hash integrity and workflow states</span>
+              </div>
+              <button class="btn btn-primary btn-sm" id="btn-new-investigation">
+                <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Create Investigation
+              </button>
+            </div>
+            <div class="card-body">
+              <div id="investigations-list" class="investigation-cards-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. REPORTS -->
+        <section id="view-reports" class="app-view">
+          <div class="card">
+            <div class="card-header">
+              <h3>Analytical Reports & Security Documentation</h3>
+              <span class="card-subtitle">Exportable executive, technical, and compliance documentation</span>
+            </div>
+            <div class="card-body">
+              <div class="reports-grid">
+                <div class="report-box">
+                  <h4>Standalone HTML Report</h4>
+                  <p>Comprehensive dark-themed executive report with embedded CSS, interactive tabs, and zero external dependencies.</p>
+                  <a href="/data/current_session/analysis_report.html" target="_blank" class="btn btn-primary btn-sm">Open HTML Report</a>
+                </div>
+                <div class="report-box">
+                  <h4>Executive Summary (JSON)</h4>
+                  <p>High-level risk posture, total traffic stats, and executive security recommendations.</p>
+                  <button class="btn btn-secondary btn-sm" onclick="App.downloadReport('executive')">Download JSON</button>
+                </div>
+                <div class="report-box">
+                  <h4>Technical Traffic Report (JSON)</h4>
+                  <p>Protocol breakdowns, port service mappings, and flow feature distributions.</p>
+                  <button class="btn btn-secondary btn-sm" onclick="App.downloadReport('technical')">Download JSON</button>
+                </div>
+                <div class="report-box">
+                  <h4>Security Assessment (JSON)</h4>
+                  <p>Categorized behavioral anomalies, signature alerts, and incident timelines.</p>
+                  <button class="btn btn-secondary btn-sm" onclick="App.downloadReport('security')">Download JSON</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. ML MODEL LAB -->
+        <section id="view-ml-lab" class="app-view">
+          <div class="card mb-4">
+            <div class="card-header flex-between">
+              <div>
+                <h3>Machine Learning Model Lab & Evaluation Framework</h3>
+                <span class="card-subtitle">Supervised intrusion detection, unsupervised anomaly models, and metrics</span>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-sm btn-secondary" id="btn-refresh-ml">Refresh ML Status</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="ml-models-grid">
+                <!-- Supervised Model Card -->
+                <div class="model-card active" id="card-supervised-model">
+                  <div class="model-card-header">
+                    <div>
+                      <div class="model-name" id="ml-sup-name">NIDS-RandomForest</div>
+                      <span class="badge badge-clean">SUPERVISED CLASSIFIER</span>
+                    </div>
+                    <span class="badge badge-low" id="ml-sup-ver">v1.0.0</span>
+                  </div>
+                  <div class="model-meta-list">
+                    <div class="model-meta-row"><span class="label">Algorithm:</span><span class="val" id="ml-sup-algo">Random Forest</span></div>
+                    <div class="model-meta-row"><span class="label">Training Status:</span><span class="val text-success" id="ml-sup-status">TRAINED & ACTIVE</span></div>
+                    <div class="model-meta-row"><span class="label">Feature Space:</span><span class="val" id="ml-sup-features">24 Flow Features</span></div>
+                    <div class="model-meta-row"><span class="label">Accuracy:</span><span class="val text-success" id="ml-sup-acc">100.0%</span></div>
+                    <div class="model-meta-row"><span class="label">Macro-F1 Score:</span><span class="val text-success" id="ml-sup-f1">1.0000</span></div>
+                  </div>
+                </div>
+
+                <!-- Unsupervised Anomaly Detector Card -->
+                <div class="model-card active" id="card-anomaly-model">
+                  <div class="model-card-header">
+                    <div>
+                      <div class="model-name" id="ml-anom-name">FlowAnomaly-IsolationForest</div>
+                      <span class="badge badge-warning">ANOMALY DETECTOR</span>
+                    </div>
+                    <span class="badge badge-low" id="ml-anom-ver">v1.0.0</span>
+                  </div>
+                  <div class="model-meta-list">
+                    <div class="model-meta-row"><span class="label">Algorithm:</span><span class="val">Isolation Forest</span></div>
+                    <div class="model-meta-row"><span class="label">Baseline Status:</span><span class="val text-success" id="ml-anom-status">BASELINE PROFILED</span></div>
+                    <div class="model-meta-row"><span class="label">Contamination:</span><span class="val" id="ml-anom-contam">0.05</span></div>
+                    <div class="model-meta-row"><span class="label">Decision Threshold:</span><span class="val" id="ml-anom-thresh">0.65</span></div>
+                    <div class="model-meta-row"><span class="label">Flagged Anomalies:</span><span class="val text-warning" id="ml-anom-count">0</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics & Feature Importance Grid -->
+              <div class="dashboard-grid">
+                <!-- Confusion Matrix -->
+                <div class="card col-span-6">
+                  <div class="card-header">
+                    <h4>Test Evaluation Confusion Matrix</h4>
+                    <span class="card-subtitle">Predicted vs Actual Ground-Truth Labels</span>
+                  </div>
+                  <div class="card-body">
+                    <div id="confusion-matrix-container" class="table-responsive"></div>
+                  </div>
+                </div>
+
+                <!-- Feature Importances -->
+                <div class="card col-span-6">
+                  <div class="card-header">
+                    <h4>Top Feature Importance Weights</h4>
+                    <span class="card-subtitle">Model feature contribution attribution</span>
+                  </div>
+                  <div class="card-body">
+                    <div id="feature-importances-container"></div>
+                  </div>
+                </div>
+
+                <!-- Model Comparison Table -->
+                <div class="card col-span-12">
+                  <div class="card-header">
+                    <h4>Model Experiment Comparison Leaderboard</h4>
+                    <span class="card-subtitle">Benchmarked classifiers ranked by Macro-F1 and inference latency</span>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="data-table" id="table-model-experiments">
+                        <thead>
+                          <tr><th>Model</th><th>Algorithm</th><th>Accuracy</th><th>Macro-F1</th><th>Precision</th><th>Recall</th><th>ROC-AUC</th><th>Latency (&mu;s)</th></tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12. AI SECURITY ANALYST -->
+        <section id="view-ai-analyst" class="app-view">
+          <div class="card">
+            <div class="card-header flex-between">
+              <div>
+                <h3>AI Security Analyst & Investigation Assistant</h3>
+                <span class="card-subtitle">Evidence-grounded natural language investigation with prompt-injection defenses</span>
+              </div>
+              <div class="session-pill">
+                <span class="status-dot online"></span>
+                <span id="ai-mode-pill">DETERMINISTIC EVIDENCE ENGINE</span>
+              </div>
+            </div>
+            <div class="card-body" style="padding: 0;">
+              <div class="chat-container">
+                <div class="chat-status-bar">
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">
+                    Assistant Mode: <strong id="ai-status-mode" class="text-success">DETERMINISTIC_EVIDENCE_ENGINE</strong> &bull;
+                    Local LLM: <span id="ai-llm-status" class="text-muted">OFFLINE (Deterministic Fallback Active)</span>
+                  </div>
+                  <button class="btn btn-sm btn-secondary" id="btn-clear-chat">Clear History</button>
+                </div>
+                
+                <div class="chat-history" id="chat-messages-container">
+                  <div class="chat-message assistant">
+                    <strong>AI Security Analyst:</strong> Welcome to the network investigation console. You can inquire about suspicious flows, correlated security incidents, host risk attributions, port scans, or C2 beaconing patterns. All answers are grounded directly in verified telemetry with zero fabricated evidence.
+                  </div>
+                </div>
+
+                <div class="chat-pills-bar">
+                  <span class="text-muted" style="font-size: 0.78rem; line-height: 28px; margin-right: 4px;">Suggested Queries:</span>
+                  <button class="query-pill" data-query="Which hosts have the highest risk?">Which hosts have highest risk?</button>
+                  <button class="query-pill" data-query="Explain this port scan">Explain port scan</button>
+                  <button class="query-pill" data-query="What patterns indicate possible beaconing?">What patterns indicate beaconing?</button>
+                  <button class="query-pill" data-query="Explain DNS tunneling">Explain DNS tunneling</button>
+                  <button class="query-pill" data-query="Summarize incident INC-0001">Summarize incident INC-0001</button>
+                  <button class="query-pill" data-query="What should I investigate next?">What should I investigate next?</button>
+                </div>
+
+                <div class="chat-input-bar">
+                  <input type="text" id="chat-input-query" class="form-control" placeholder="Ask a question about network activity, hosts, or incidents...">
+                  <button class="btn btn-primary" id="btn-send-chat">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    Investigate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Investigation Modal -->
+  <div id="investigation-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-inv-title">Create Investigation</h3>
+        <button class="close-btn" id="btn-close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Investigation Title:</label>
+          <input type="text" id="modal-input-title" class="form-control" placeholder="e.g. Data Exfiltration Investigation">
+        </div>
+        <div class="form-group">
+          <label>Priority:</label>
+          <select id="modal-select-priority" class="form-control">
+            <option value="CRITICAL">Critical</option>
+            <option value="HIGH" selected>High</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="LOW">Low</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Description & Scope:</label>
+          <textarea id="modal-input-desc" class="form-control" rows="3" placeholder="Describe suspected anomaly or scope..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-cancel-modal">Cancel</button>
+        <button class="btn btn-primary" id="btn-save-investigation">Save Investigation</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

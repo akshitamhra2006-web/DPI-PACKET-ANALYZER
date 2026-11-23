@@ -1,0 +1,73 @@
+{
+  "rules": [
+    {
+      "id": "SIG-HTTP-GET",
+      "name": "HTTP Inbound GET Request",
+      "category": "INFO",
+      "severity": "LOW",
+      "network": {
+        "protocol": "TCP",
+        "dst_ports": [80, 8080]
+      },
+      "stream_content": [
+        {
+          "pattern": "GET ",
+          "offset": 0,
+          "depth": 10
+        }
+      ]
+    },
+    {
+      "id": "SIG-ATTACKBOT-UA",
+      "name": "Malicious User-Agent AttackBot Detected",
+      "category": "MALWARE",
+      "severity": "HIGH",
+      "network": {
+        "protocol": "TCP",
+        "dst_ports": [80, 8080]
+      },
+      "stream_content": [
+        {
+          "pattern": "AttackBot",
+          "offset": -1,
+          "depth": 0
+        }
+      ]
+    },
+    {
+      "id": "SIG-TIKTOK-TRAFFIC",
+      "name": "TikTok Domain Traffic",
+      "category": "POLICY_VIOLATION",
+      "severity": "MEDIUM",
+      "tls": {
+        "sni": "*.tiktok.com"
+      }
+    },
+    {
+      "id": "SIG-DNS-TUNNELING",
+      "name": "DNS Tunneling Pattern Detected",
+      "category": "DATA_LEAK",
+      "severity": "HIGH",
+      "dns": {
+        "query_name": "*.tunneling-domain.com"
+      }
+    },
+    {
+      "id": "SIG-C2-BEACON-PAYLOAD",
+      "name": "C2 Heartbeat Beacon Checkin Payload",
+      "category": "MALWARE",
+      "severity": "CRITICAL",
+      "network": {
+        "protocol": "TCP",
+        "dst_ports": [8443]
+      },
+      "stream_content": [
+        {
+          "pattern": "HEARTBEAT_ID_",
+          "offset": -1,
+          "depth": 0
+        }
+      ]
+    }
+  ]
+}

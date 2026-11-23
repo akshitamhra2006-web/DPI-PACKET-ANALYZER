@@ -1,0 +1,2675 @@
+[
+{
+  "flow_id": 8,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.50",
+  "destination_ip": "172.217.0.100",
+  "source_port": 64009,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000075294920,
+  "last_time_us": 1700000075294920,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 54,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 54.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 54.0000,
+    "mean": 54.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Unknown",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 6,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "17.253.144.10",
+  "source_port": 56170,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000060025874,
+  "last_time_us": 1700000063443486,
+  "duration_seconds": 3.4176,
+  "total_packets": 4,
+  "total_bytes": 299,
+  "packets_per_second": 1.1704,
+  "bytes_per_second": 87.4880,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4545,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 137.0000,
+    "mean": 74.7500,
+    "variance": 1722.2500,
+    "stddev": 41.5000
+  },
+  "iat_microseconds": {
+    "min": 300115.0000,
+    "max": 1731892.0000,
+    "mean": 1139204.0000,
+    "variance": 558031434033.0000,
+    "stddev": 747015.0159
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 245,
+    "size_mean": 81.6667,
+    "size_variance": 2296.3333,
+    "iat_mean": 1708806.0000,
+    "iat_variance": 208917772802.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Apple",
+  "sni": "www.apple.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 83,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 5,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "35.186.224.47",
+  "source_port": 51883,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000048774332,
+  "last_time_us": 1700000051525769,
+  "duration_seconds": 2.7514,
+  "total_packets": 4,
+  "total_bytes": 302,
+  "packets_per_second": 1.4538,
+  "bytes_per_second": 109.7608,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5091,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 140.0000,
+    "mean": 75.5000,
+    "variance": 1849.0000,
+    "stddev": 43.0000
+  },
+  "iat_microseconds": {
+    "min": 716007.0000,
+    "max": 1116517.0000,
+    "mean": 917145.6667,
+    "variance": 40104407625.3333,
+    "stddev": 200260.8490
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 248,
+    "size_mean": 82.6667,
+    "size_variance": 2465.3333,
+    "iat_mean": 1375718.5000,
+    "iat_variance": 870438526464.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Spotify",
+  "sni": "open.spotify.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 86,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 7,
+  "protocol": "UDP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "8.8.8.8",
+  "source_port": 63295,
+  "destination_port": 53,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000069590252,
+  "last_time_us": 1700000069590252,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 75,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 75.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 75.0000,
+    "max": 75.0000,
+    "mean": 75.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 75,
+    "size_mean": 75.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "DNS",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "www.youtube.com",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 4935,
+    "rcode": 0,
+    "rcode_name": "NOERROR",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 2,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "157.240.1.35",
+  "source_port": 64044,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000008630329,
+  "last_time_us": 1700000011013290,
+  "duration_seconds": 2.3830,
+  "total_packets": 4,
+  "total_bytes": 302,
+  "packets_per_second": 1.6786,
+  "bytes_per_second": 126.7331,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5091,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 140.0000,
+    "mean": 75.5000,
+    "variance": 1849.0000,
+    "stddev": 43.0000
+  },
+  "iat_microseconds": {
+    "min": 187923.0000,
+    "max": 1526210.0000,
+    "mean": 794320.3333,
+    "variance": 459564267886.3333,
+    "stddev": 677911.6962
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 248,
+    "size_mean": 82.6667,
+    "size_variance": 2465.3333,
+    "iat_mean": 1191480.5000,
+    "iat_variance": 2014255311612.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Facebook",
+  "sni": "www.facebook.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 86,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "35.186.227.140",
+  "source_port": 52879,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000040646171,
+  "last_time_us": 1700000043502618,
+  "duration_seconds": 2.8564,
+  "total_packets": 4,
+  "total_bytes": 302,
+  "packets_per_second": 1.4003,
+  "bytes_per_second": 105.7257,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5091,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 140.0000,
+    "mean": 75.5000,
+    "variance": 1849.0000,
+    "stddev": 43.0000
+  },
+  "iat_microseconds": {
+    "min": 776413.0000,
+    "max": 1150483.0000,
+    "mean": 952149.0000,
+    "variance": 35365093428.0000,
+    "stddev": 188056.0912
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 248,
+    "size_mean": 82.6667,
+    "size_variance": 2465.3333,
+    "iat_mean": 1428223.5000,
+    "iat_variance": 497348524512.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Telegram",
+  "sni": "web.telegram.org",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 86,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 3,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "140.82.114.4",
+  "source_port": 55490,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000028155818,
+  "last_time_us": 1700000031119776,
+  "duration_seconds": 2.9640,
+  "total_packets": 4,
+  "total_bytes": 296,
+  "packets_per_second": 1.3495,
+  "bytes_per_second": 99.8665,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4000,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 134.0000,
+    "mean": 74.0000,
+    "variance": 1600.0000,
+    "stddev": 40.0000
+  },
+  "iat_microseconds": {
+    "min": 630302.0000,
+    "max": 1476609.0000,
+    "mean": 987986.0000,
+    "variance": 191917650853.0000,
+    "stddev": 438084.0682
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 242,
+    "size_mean": 80.6667,
+    "size_variance": 2133.3333,
+    "iat_mean": 1481979.0000,
+    "iat_variance": 1450707424658.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "GitHub",
+  "sni": "github.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 80,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 1,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "142.250.185.110",
+  "source_port": 58867,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000004949926,
+  "last_time_us": 1700000007797721,
+  "duration_seconds": 2.8478,
+  "total_packets": 4,
+  "total_bytes": 301,
+  "packets_per_second": 1.4046,
+  "bytes_per_second": 105.6958,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4909,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 139.0000,
+    "mean": 75.2500,
+    "variance": 1806.2500,
+    "stddev": 42.5000
+  },
+  "iat_microseconds": {
+    "min": 594333.0000,
+    "max": 1502377.0000,
+    "mean": 949265.0000,
+    "variance": 235592460784.0000,
+    "stddev": 485378.6777
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 247,
+    "size_mean": 82.3333,
+    "size_variance": 2408.3333,
+    "iat_mean": 1423897.5000,
+    "iat_variance": 12318063840.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "YouTube",
+  "sni": "www.youtube.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 85,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967305,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.50",
+  "destination_ip": "172.217.0.100",
+  "source_port": 49913,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000074900372,
+  "last_time_us": 1700000074900372,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 54,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 54.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 54.0000,
+    "mean": 54.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Unknown",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967302,
+  "protocol": "UDP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "8.8.8.8",
+  "source_port": 61888,
+  "destination_port": 53,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000070300160,
+  "last_time_us": 1700000070300160,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 76,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 76.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 76.0000,
+    "max": 76.0000,
+    "mean": 76.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 76,
+    "size_mean": 76.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "DNS",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "www.facebook.com",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 13124,
+    "rcode": 0,
+    "rcode_name": "NOERROR",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967301,
+  "protocol": "UDP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "8.8.8.8",
+  "source_port": 55178,
+  "destination_port": 53,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000068201463,
+  "last_time_us": 1700000068201463,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 74,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 74.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 74.0000,
+    "max": 74.0000,
+    "mean": 74.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 74,
+    "size_mean": 74.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "DNS",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "www.google.com",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 42815,
+    "rcode": 0,
+    "rcode_name": "NOERROR",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967300,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "185.199.108.153",
+  "source_port": 64312,
+  "destination_port": 80,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000066063776,
+  "last_time_us": 1700000067786279,
+  "duration_seconds": 1.7225,
+  "total_packets": 2,
+  "total_bytes": 184,
+  "packets_per_second": 1.1611,
+  "bytes_per_second": 106.8213,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 184.0000,
+  "packet_asymmetry_ratio": 2.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 130.0000,
+    "mean": 92.0000,
+    "variance": 2888.0000,
+    "stddev": 53.7401
+  },
+  "iat_microseconds": {
+    "min": 1722503.0000,
+    "max": 1722503.0000,
+    "mean": 1722503.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 2,
+    "bytes": 184,
+    "size_mean": 92.0000,
+    "size_variance": 2888.0000,
+    "iat_mean": 1722503.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "HTTP",
+  "sni": "",
+  "http_host": "httpbin.org",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 76,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "GET",
+    "uri": "/",
+    "status_code": 0,
+    "user_agent": "DPI-Test/1.0",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967304,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.50",
+  "destination_ip": "172.217.0.100",
+  "source_port": 58448,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000072648016,
+  "last_time_us": 1700000072648016,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 54,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 54.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 54.0000,
+    "mean": 54.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Unknown",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967303,
+  "protocol": "UDP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "8.8.8.8",
+  "source_port": 51251,
+  "destination_port": 53,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000071855351,
+  "last_time_us": 1700000071855351,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 75,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 75.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 75.0000,
+    "max": 75.0000,
+    "mean": 75.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 75,
+    "size_mean": 75.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "DNS",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "api.twitter.com",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 29352,
+    "rcode": 0,
+    "rcode_name": "NOERROR",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967299,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "93.184.216.34",
+  "source_port": 58936,
+  "destination_port": 80,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000064303244,
+  "last_time_us": 1700000065394306,
+  "duration_seconds": 1.0911,
+  "total_packets": 2,
+  "total_bytes": 184,
+  "packets_per_second": 1.8331,
+  "bytes_per_second": 168.6430,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 184.0000,
+  "packet_asymmetry_ratio": 2.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 130.0000,
+    "mean": 92.0000,
+    "variance": 2888.0000,
+    "stddev": 53.7401
+  },
+  "iat_microseconds": {
+    "min": 1091062.0000,
+    "max": 1091062.0000,
+    "mean": 1091062.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 2,
+    "bytes": 184,
+    "size_mean": 92.0000,
+    "size_variance": 2888.0000,
+    "iat_mean": 1091062.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "HTTP",
+  "sni": "",
+  "http_host": "example.com",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 76,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "GET",
+    "uri": "/",
+    "status_code": 0,
+    "user_agent": "DPI-Test/1.0",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967298,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "192.0.78.24",
+  "source_port": 52439,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000052246922,
+  "last_time_us": 1700000055371845,
+  "duration_seconds": 3.1249,
+  "total_packets": 4,
+  "total_bytes": 304,
+  "packets_per_second": 1.2800,
+  "bytes_per_second": 97.2824,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5455,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 142.0000,
+    "mean": 76.0000,
+    "variance": 1936.0000,
+    "stddev": 44.0000
+  },
+  "iat_microseconds": {
+    "min": 601734.0000,
+    "max": 1718503.0000,
+    "mean": 1041641.0000,
+    "variance": 353904003859.0000,
+    "stddev": 594898.3139
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 250,
+    "size_mean": 83.3333,
+    "size_variance": 2581.3333,
+    "iat_mean": 1562461.5000,
+    "iat_variance": 1845994658512.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Cloudflare",
+  "sni": "www.cloudflare.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 88,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 4294967297,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "142.250.185.206",
+  "source_port": 54552,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000000484823,
+  "last_time_us": 1700000003380833,
+  "duration_seconds": 2.8960,
+  "total_packets": 4,
+  "total_bytes": 300,
+  "packets_per_second": 1.3812,
+  "bytes_per_second": 103.5908,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4727,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 138.0000,
+    "mean": 75.0000,
+    "variance": 1764.0000,
+    "stddev": 42.0000
+  },
+  "iat_microseconds": {
+    "min": 765285.0000,
+    "max": 1113770.0000,
+    "mean": 965336.6667,
+    "variance": 32358788058.3333,
+    "stddev": 179885.4860
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 246,
+    "size_mean": 82.0000,
+    "size_variance": 2352.0000,
+    "iat_mean": 1448005.0000,
+    "iat_variance": 371608205000.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Google",
+  "sni": "www.google.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 84,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934598,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.50",
+  "destination_ip": "172.217.0.100",
+  "source_port": 53728,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000076446055,
+  "last_time_us": 1700000076446055,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 54,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 54.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 54.0000,
+    "mean": 54.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Unknown",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934597,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "13.107.42.14",
+  "source_port": 57103,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000056930355,
+  "last_time_us": 1700000059752274,
+  "duration_seconds": 2.8219,
+  "total_packets": 4,
+  "total_bytes": 303,
+  "packets_per_second": 1.4175,
+  "bytes_per_second": 107.3737,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5273,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 141.0000,
+    "mean": 75.7500,
+    "variance": 1892.2500,
+    "stddev": 43.5000
+  },
+  "iat_microseconds": {
+    "min": 430946.0000,
+    "max": 1443112.0000,
+    "mean": 940639.6667,
+    "variance": 256159113630.3333,
+    "stddev": 506121.6392
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 249,
+    "size_mean": 83.0000,
+    "size_variance": 2523.0000,
+    "iat_mean": 1410959.5000,
+    "iat_variance": 2067566512.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Microsoft",
+  "sni": "www.microsoft.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 87,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934595,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "52.94.236.248",
+  "source_port": 63093,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000020087666,
+  "last_time_us": 1700000023334526,
+  "duration_seconds": 3.2469,
+  "total_packets": 4,
+  "total_bytes": 300,
+  "packets_per_second": 1.2320,
+  "bytes_per_second": 92.3970,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4727,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 138.0000,
+    "mean": 75.0000,
+    "variance": 1764.0000,
+    "stddev": 42.0000
+  },
+  "iat_microseconds": {
+    "min": 719737.0000,
+    "max": 1593395.0000,
+    "mean": 1082286.6667,
+    "variance": 207371833322.3333,
+    "stddev": 455380.9760
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 246,
+    "size_mean": 82.0000,
+    "size_variance": 2352.0000,
+    "iat_mean": 1623430.0000,
+    "iat_variance": 1633322076498.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Amazon",
+  "sni": "www.amazon.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 84,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934594,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "104.244.42.65",
+  "source_port": 59993,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000016898253,
+  "last_time_us": 1700000019975513,
+  "duration_seconds": 3.0773,
+  "total_packets": 4,
+  "total_bytes": 297,
+  "packets_per_second": 1.2999,
+  "bytes_per_second": 96.5144,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4182,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 135.0000,
+    "mean": 74.2500,
+    "variance": 1640.2500,
+    "stddev": 40.5000
+  },
+  "iat_microseconds": {
+    "min": 273651.0000,
+    "max": 1575460.0000,
+    "mean": 1025753.3333,
+    "variance": 454399672534.3333,
+    "stddev": 674091.7390
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 243,
+    "size_mean": 81.0000,
+    "size_variance": 2187.0000,
+    "iat_mean": 1538630.0000,
+    "iat_variance": 192796902722.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Twitter/X",
+  "sni": "twitter.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 81,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934596,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "104.16.85.20",
+  "source_port": 54566,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000032672125,
+  "last_time_us": 1700000035851289,
+  "duration_seconds": 3.1792,
+  "total_packets": 4,
+  "total_bytes": 297,
+  "packets_per_second": 1.2582,
+  "bytes_per_second": 93.4208,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4182,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 135.0000,
+    "mean": 74.2500,
+    "variance": 1640.2500,
+    "stddev": 40.5000
+  },
+  "iat_microseconds": {
+    "min": 645338.0000,
+    "max": 1579007.0000,
+    "mean": 1059721.3333,
+    "variance": 226187825044.3334,
+    "stddev": 475592.0784
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 243,
+    "size_mean": 81.0000,
+    "size_variance": 2187.0000,
+    "iat_mean": 1589582.0000,
+    "iat_variance": 223661250.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Discord",
+  "sni": "discord.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 81,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 8589934593,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "157.240.1.174",
+  "source_port": 58747,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000012193241,
+  "last_time_us": 1700000015616566,
+  "duration_seconds": 3.4233,
+  "total_packets": 4,
+  "total_bytes": 303,
+  "packets_per_second": 1.1685,
+  "bytes_per_second": 88.5104,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.5273,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 141.0000,
+    "mean": 75.7500,
+    "variance": 1892.2500,
+    "stddev": 43.5000
+  },
+  "iat_microseconds": {
+    "min": 721485.0000,
+    "max": 1396575.0000,
+    "mean": 1141108.3333,
+    "variance": 134147185433.3333,
+    "stddev": 366261.0892
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 249,
+    "size_mean": 83.0000,
+    "size_variance": 2523.0000,
+    "iat_mean": 1711662.5000,
+    "iat_variance": 1960902963012.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Instagram",
+  "sni": "www.instagram.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 87,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 12884901892,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.50",
+  "destination_ip": "172.217.0.100",
+  "source_port": 50713,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000073930402,
+  "last_time_us": 1700000073930402,
+  "duration_seconds": 0.0000,
+  "total_packets": 1,
+  "total_bytes": 54,
+  "packets_per_second": 0.0000,
+  "bytes_per_second": 0.0000,
+  "has_rate_metrics": false,
+  "byte_asymmetry_ratio": 54.0000,
+  "packet_asymmetry_ratio": 1.0000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 54.0000,
+    "mean": 54.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "iat_microseconds": {
+    "min": 0.0000,
+    "max": 0.0000,
+    "mean": 0.0000,
+    "variance": 0.0000,
+    "stddev": 0.0000
+  },
+  "forward": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "reverse": {
+    "packets": 0,
+    "bytes": 0,
+    "size_mean": 0.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 0,
+    "ack": 0,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Unknown",
+  "sni": "",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 0,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 12884901891,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "99.86.0.100",
+  "source_port": 63971,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000044824556,
+  "last_time_us": 1700000047501098,
+  "duration_seconds": 2.6765,
+  "total_packets": 4,
+  "total_bytes": 300,
+  "packets_per_second": 1.4945,
+  "bytes_per_second": 112.0849,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4727,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 138.0000,
+    "mean": 75.0000,
+    "variance": 1764.0000,
+    "stddev": 42.0000
+  },
+  "iat_microseconds": {
+    "min": 737671.0000,
+    "max": 1132169.0000,
+    "mean": 892180.6667,
+    "variance": 44387119842.3333,
+    "stddev": 210682.5096
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 246,
+    "size_mean": 82.0000,
+    "size_variance": 2352.0000,
+    "iat_mean": 1338271.0000,
+    "iat_variance": 84956068808.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "TikTok",
+  "sni": "www.tiktok.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 84,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 12884901890,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "35.186.224.25",
+  "source_port": 49582,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000036906202,
+  "last_time_us": 1700000039044758,
+  "duration_seconds": 2.1386,
+  "total_packets": 4,
+  "total_bytes": 293,
+  "packets_per_second": 1.8704,
+  "bytes_per_second": 137.0083,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.3455,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 131.0000,
+    "mean": 73.2500,
+    "variance": 1482.2500,
+    "stddev": 38.5000
+  },
+  "iat_microseconds": {
+    "min": 384855.0000,
+    "max": 996345.0000,
+    "mean": 712852.0000,
+    "variance": 94965459537.0000,
+    "stddev": 308164.6630
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 239,
+    "size_mean": 79.6667,
+    "size_variance": 1976.3333,
+    "iat_mean": 1069278.0000,
+    "iat_variance": 10638444978.0000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Zoom",
+  "sni": "zoom.us",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 77,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+},
+{
+  "flow_id": 12884901889,
+  "protocol": "TCP",
+  "source_ip": "192.168.1.100",
+  "destination_ip": "23.52.167.61",
+  "source_port": 50684,
+  "destination_port": 443,
+  "state": "TIMED_OUT",
+  "termination_reason": "IDLE_TIMEOUT",
+  "start_time_us": 1700000024771844,
+  "last_time_us": 1700000027666609,
+  "duration_seconds": 2.8948,
+  "total_packets": 4,
+  "total_bytes": 301,
+  "packets_per_second": 1.3818,
+  "bytes_per_second": 103.9808,
+  "has_rate_metrics": true,
+  "byte_asymmetry_ratio": 4.4909,
+  "packet_asymmetry_ratio": 1.5000,
+  "packet_size": {
+    "min": 54.0000,
+    "max": 139.0000,
+    "mean": 75.2500,
+    "variance": 1806.2500,
+    "stddev": 42.5000
+  },
+  "iat_microseconds": {
+    "min": 660030.0000,
+    "max": 1292920.0000,
+    "mean": 964921.6667,
+    "variance": 100537876558.3333,
+    "stddev": 317077.0830
+  },
+  "forward": {
+    "packets": 3,
+    "bytes": 247,
+    "size_mean": 82.3333,
+    "size_variance": 2408.3333,
+    "iat_mean": 1447382.5000,
+    "iat_variance": 47717327812.5000,
+    "syn": 1,
+    "ack": 2,
+    "fin": 0,
+    "rst": 0,
+    "psh": 1
+  },
+  "reverse": {
+    "packets": 1,
+    "bytes": 54,
+    "size_mean": 54.0000,
+    "size_variance": 0.0000,
+    "iat_mean": 0.0000,
+    "iat_variance": 0.0000,
+    "syn": 1,
+    "ack": 1,
+    "fin": 0,
+    "rst": 0,
+    "psh": 0
+  },
+  "app_type": "Netflix",
+  "sni": "www.netflix.com",
+  "http_host": "",
+  "dns_query": "",
+  "is_blocked": false,
+  "block_reason": "",
+  "tcp_stream": {
+    "fwd_bytes_reassembled": 85,
+    "rev_bytes_reassembled": 0,
+    "out_of_order_count": 0,
+    "retrans_count": 0,
+    "overlap_count": 0,
+    "gap_count": 0,
+    "is_complete": false
+  },
+  "http": {
+    "method": "",
+    "uri": "",
+    "status_code": 0,
+    "user_agent": "",
+    "content_length": -1
+  },
+  "tls": {
+    "alpn": "",
+    "supported_version": "TLS 1.3",
+    "encrypted_bytes": 0
+  },
+  "dns": {
+    "tx_id": 0,
+    "rcode": 0,
+    "rcode_name": "",
+    "latency_us": 0
+  },
+  "threat_intel": {
+    "ioc_match_count": 0,
+    "threat_summary": "",
+    "matched_ioc_ids": [],
+    "threat_categories": []
+  }
+}
+]

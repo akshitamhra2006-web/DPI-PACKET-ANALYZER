@@ -1,0 +1,333 @@
+[
+  {
+    "schema_version": "1.0",
+    "incident_id": "INC-0001",
+    "category": "RECONNAISSANCE",
+    "title": "Network Reconnaissance and Scanning Activity",
+    "severity": "MEDIUM",
+    "confidence": "HIGH",
+    "confidence_explanation": "High confidence based on 5 distinct flows and 2 corroborated detection indicators.",
+    "correlation_score": 30.00,
+    "first_seen_us": 1700000072648016,
+    "last_seen_us": 1700000076446055,
+    "first_seen_iso": "",
+    "last_seen_iso": "",
+    "duration_seconds": 3.7980,
+    "primary_endpoint": "192.168.1.50",
+    "related_endpoints": ["172.217.0.100"],
+    "related_ports": [443],
+    "related_flow_ids": [8, 4294967305, 4294967304, 8589934598, 12884901892],
+    "related_detection_ids": ["DET-REPEAT-3201a8c0-18bcfe683c8-1", "DET-TCP-SYN-3201a8c0-18bcfe68e1e-1"],
+    "related_signature_ids": [],
+    "related_ioc_ids": [],
+    "evidence_descriptions": [
+      "Source host engaged in coordinated reconnaissance targeting 1 ports across 1 destination hosts.",
+      "High ratio of uncompleted or repeated connection attempts detected during reconnaissance.",
+      "Elevated SYN-heavy or unacknowledged probe traffic pattern observed."
+    ],
+    "threat_intel_summaries": [
+    ],
+    "observed_metrics": {"total_related_flows": "5", "unique_probed_hosts": "1", "unique_probed_ports": "1"},
+    "correlation_rules_triggered": ["RuleReconnaissance"],
+    "rule_version": "1.0",
+    "limitations": [
+      "Port scanning activity does not guarantee unauthorized host compromise.",
+      "Security auditing scanners and vulnerability assessment tools can exhibit identical patterns.",
+      "Threat intelligence matches are observational indicators and do not constitute independent proof of compromise."
+    ],
+    "recommended_investigation_steps": [
+      "Check whether 192.168.1.50 is an authorized vulnerability scanner or network mapper.",
+      "Inspect firewall and ingress gateway logs for unauthorized access attempts from 192.168.1.50.",
+      "Verify if any targeted host responded with OPEN ports or application-layer data."
+    ],
+    "status": "OBSERVED",
+    "timeline": [
+      {
+        "timestamp_us": 1700000072648016,
+        "timestamp_iso": "2023-11-14T22:14:32.648Z",
+        "event_type": "DETECTION",
+        "endpoint": "192.168.1.50",
+        "flow_id": 0,
+        "detection_id": "DET-REPEAT-3201a8c0-18bcfe683c8-1",
+        "description": "Source host made 5 repeated connection attempts to 172.217.0.100:443 with a high rate of uncompleted handshakes.",
+        "source": "repeated_attempts_detector",
+        "observed_values": {"attempts_count": "5", "fail_ratio": "1.000000", "failed_count": "5", "observed_metric": "5 attempts (100% incomplete)", "threshold": "5"}
+      },
+      {
+        "timestamp_us": 1700000072648016,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 4294967304,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000073930402,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 12884901892,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000074900372,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 4294967305,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000075294920,
+        "timestamp_iso": "2023-11-14T22:14:35.294Z",
+        "event_type": "DETECTION",
+        "endpoint": "192.168.1.50",
+        "flow_id": 0,
+        "detection_id": "DET-TCP-SYN-3201a8c0-18bcfe68e1e-1",
+        "description": "Source host exhibited a SYN-heavy communication pattern where 5 out of 5 TCP flows initiated connections without receiving or completing handshakes.",
+        "source": "tcp_anomaly_detector",
+        "observed_values": {"observed_metric": "5/5 SYN-heavy flows (100%)", "syn_heavy_flows": "5", "syn_ratio": "1.000000", "threshold_ratio": "0.850000", "total_tcp_flows": "5"}
+      },
+      {
+        "timestamp_us": 1700000075294920,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 8,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000076446055,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 8589934598,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "incident_id": "INC-0002",
+    "category": "SUSPICIOUS_OUTBOUND_COMMUNICATION",
+    "title": "Suspicious Outbound Communication Channel",
+    "severity": "MEDIUM",
+    "confidence": "MEDIUM",
+    "confidence_explanation": "Medium confidence based on multiple corroborated indicators.",
+    "correlation_score": 40.00,
+    "first_seen_us": 1700000072648016,
+    "last_seen_us": 1700000076446055,
+    "first_seen_iso": "",
+    "last_seen_iso": "",
+    "duration_seconds": 3.7980,
+    "primary_endpoint": "192.168.1.50",
+    "related_endpoints": ["172.217.0.100"],
+    "related_ports": [443],
+    "related_flow_ids": [8, 4294967305, 4294967304, 8589934598, 12884901892],
+    "related_detection_ids": ["DET-REPEAT-3201a8c0-18bcfe683c8-1"],
+    "related_signature_ids": [],
+    "related_ioc_ids": [],
+    "evidence_descriptions": [
+      "Endpoint established repeated outbound communication channels with regular timing characteristics.",
+      "Consistent outbound rendezvous targeted remote host 172.217.0.100 across multiple distinct sessions."
+    ],
+    "threat_intel_summaries": [
+    ],
+    "observed_metrics": {"destination_contacts": "1", "tls_sni": "www.netflix.com"},
+    "correlation_rules_triggered": ["RuleSuspiciousOutbound"],
+    "rule_version": "1.0",
+    "limitations": [
+      "Periodic outbound polling is common in legitimate keep-alives, cloud agents, and telemetry services.",
+      "Threat intelligence matches are observational indicators and do not constitute independent proof of compromise."
+    ],
+    "recommended_investigation_steps": [
+      "Inspect process listening or originating traffic on 192.168.1.50.",
+      "Verify remote IP destination reputation and TLS certificate information."
+    ],
+    "status": "OBSERVED",
+    "timeline": [
+      {
+        "timestamp_us": 1700000072648016,
+        "timestamp_iso": "2023-11-14T22:14:32.648Z",
+        "event_type": "DETECTION",
+        "endpoint": "192.168.1.50",
+        "flow_id": 0,
+        "detection_id": "DET-REPEAT-3201a8c0-18bcfe683c8-1",
+        "description": "Source host made 5 repeated connection attempts to 172.217.0.100:443 with a high rate of uncompleted handshakes.",
+        "source": "repeated_attempts_detector",
+        "observed_values": {"attempts_count": "5", "fail_ratio": "1.000000", "failed_count": "5", "observed_metric": "5 attempts (100% incomplete)", "threshold": "5"}
+      },
+      {
+        "timestamp_us": 1700000072648016,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 4294967304,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000073930402,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 12884901892,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000074900372,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 4294967305,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000075294920,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 8,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000076446055,
+        "timestamp_iso": "",
+        "event_type": "FLOW_START",
+        "endpoint": "192.168.1.50",
+        "flow_id": 8589934598,
+        "detection_id": "",
+        "description": "Flow established to 172.217.0.100:443",
+        "source": "flow_table",
+        "observed_values": {}
+      }
+    ]
+  },
+  {
+    "schema_version": "1.0",
+    "incident_id": "INC-0003",
+    "category": "SUSPICIOUS_OUTBOUND_COMMUNICATION",
+    "title": "Signature-Driven Security Threat Incident",
+    "severity": "HIGH",
+    "confidence": "HIGH",
+    "confidence_explanation": "Corroborated by observed traffic patterns and verified threat intelligence indicators.",
+    "correlation_score": 60.00,
+    "first_seen_us": 1700000064303244,
+    "last_seen_us": 1700000044824556,
+    "first_seen_iso": "2023-11-14T22:14:24.303244Z",
+    "last_seen_iso": "2023-11-14T22:14:04.824556Z",
+    "duration_seconds": 0.0000,
+    "primary_endpoint": "192.168.1.100",
+    "related_endpoints": ["93.184.216.34", "185.199.108.153", "99.86.0.100"],
+    "related_ports": [],
+    "related_flow_ids": [4294967299, 4294967300, 12884901891],
+    "related_detection_ids": [],
+    "related_signature_ids": ["SIG-HTTP-GET", "SIG-HTTP-GET", "SIG-TIKTOK-TRAFFIC"],
+    "related_ioc_ids": ["IOC-EXT-MALWARE-IP", "IOC-POLICY-TIKTOK"],
+    "evidence_descriptions": [
+      "Signature SIG-HTTP-GET: HTTP Inbound GET Request",
+      "Signature SIG-HTTP-GET: HTTP Inbound GET Request",
+      "Signature SIG-TIKTOK-TRAFFIC: TikTok Domain Traffic",
+      "Threat Intelligence match: IOC IOC-EXT-MALWARE-IP (93.184.216.34) [KNOWN_MALWARE_HOST]",
+      "Threat Intelligence match: IOC IOC-POLICY-TIKTOK (tiktok.com) [POLICY_WATCHLIST]"
+    ],
+    "threat_intel_summaries": [
+      "Threat Intelligence match: IOC IOC-EXT-MALWARE-IP (93.184.216.34) [KNOWN_MALWARE_HOST]",
+      "Threat Intelligence match: IOC IOC-POLICY-TIKTOK (tiktok.com) [POLICY_WATCHLIST]"
+    ],
+    "observed_metrics": {},
+    "correlation_rules_triggered": [],
+    "rule_version": "1.0",
+    "limitations": [
+      "Incident derived from signature pattern matches on offline PCAP.",
+      "Threat intelligence matches are observational indicators and do not constitute independent proof of compromise."
+    ],
+    "recommended_investigation_steps": [
+      "Isolate suspect host 192.168.1.100 and inspect processes."
+    ],
+    "status": "NEW",
+    "timeline": [
+      {
+        "timestamp_us": 1700000044824556,
+        "timestamp_iso": "",
+        "event_type": "SIGNATURE_MATCH",
+        "endpoint": "192.168.1.100",
+        "flow_id": 12884901891,
+        "detection_id": "SIG-TIKTOK-TRAFFIC",
+        "description": "Signature SIG-TIKTOK-TRAFFIC matched: TikTok Domain Traffic",
+        "source": "SIGNATURE_ENGINE",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000044824556,
+        "timestamp_iso": "",
+        "event_type": "THREAT_INTEL_MATCH",
+        "endpoint": "192.168.1.100",
+        "flow_id": 12884901891,
+        "detection_id": "IOC-POLICY-TIKTOK",
+        "description": "Threat Intelligence IOC match: tiktok.com [POLICY_WATCHLIST] (MEDIUM)",
+        "source": "THREAT_INTEL:FEED-GLOBAL-IOCS-01",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000064303244,
+        "timestamp_iso": "",
+        "event_type": "SIGNATURE_MATCH",
+        "endpoint": "192.168.1.100",
+        "flow_id": 4294967299,
+        "detection_id": "SIG-HTTP-GET",
+        "description": "Signature SIG-HTTP-GET matched: HTTP Inbound GET Request",
+        "source": "SIGNATURE_ENGINE",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000064303244,
+        "timestamp_iso": "",
+        "event_type": "THREAT_INTEL_MATCH",
+        "endpoint": "192.168.1.100",
+        "flow_id": 4294967299,
+        "detection_id": "IOC-EXT-MALWARE-IP",
+        "description": "Threat Intelligence IOC match: 93.184.216.34 [KNOWN_MALWARE_HOST] (HIGH)",
+        "source": "THREAT_INTEL:FEED-GLOBAL-IOCS-01",
+        "observed_values": {}
+      },
+      {
+        "timestamp_us": 1700000066063776,
+        "timestamp_iso": "",
+        "event_type": "SIGNATURE_MATCH",
+        "endpoint": "192.168.1.100",
+        "flow_id": 4294967300,
+        "detection_id": "SIG-HTTP-GET",
+        "description": "Signature SIG-HTTP-GET matched: HTTP Inbound GET Request",
+        "source": "SIGNATURE_ENGINE",
+        "observed_values": {}
+      }
+    ]
+  }
+]

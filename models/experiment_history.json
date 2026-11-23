@@ -1,0 +1,278 @@
+[
+  {
+    "experiment_id": "EXP-RF-CV-01",
+    "model_name": "NIDS-RandomForest",
+    "version": "2.0.0",
+    "algorithm": "random_forest",
+    "evaluation_type": "STRATIFIED_CROSS_VALIDATION",
+    "evaluated_at": "2026-11-23T02:53:38Z",
+    "total_samples": 92,
+    "n_folds": 2,
+    "fold_adaptation_reason": "Fold count adapted from 5 to 2 because minority class has only 2 samples.",
+    "metrics": {
+      "accuracy": 0.9674,
+      "accuracy_std": 0.0109,
+      "f1_macro": 0.692,
+      "f1_macro_std": 0.1,
+      "precision_macro": 0.6846,
+      "precision_std": 0.1,
+      "recall_macro": 0.7,
+      "recall_std": 0.1,
+      "false_positive_rate": 0.0081,
+      "false_negative_rate": 0.3,
+      "roc_auc": null,
+      "pr_auc": null
+    },
+    "class_metrics": {
+      "BENIGN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "total_samples": 2
+      },
+      "C2_BEACON": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "total_samples": 24
+      },
+      "DNS_TUNNEL": {
+        "precision": 0.9231,
+        "recall": 1.0,
+        "f1_score": 0.96,
+        "total_samples": 24
+      },
+      "MALWARE_HTTP": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1_score": 0.5,
+        "total_samples": 2
+      },
+      "PORT_SCAN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "total_samples": 40
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "BENIGN",
+        "C2_BEACON",
+        "DNS_TUNNEL",
+        "MALWARE_HTTP",
+        "PORT_SCAN"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ]
+    },
+    "fold_results": [
+      {
+        "fold": 1,
+        "train_samples": 46,
+        "test_samples": 46,
+        "accuracy": 0.9783,
+        "f1_macro": 0.792,
+        "precision_macro": 0.7846,
+        "recall_macro": 0.8
+      },
+      {
+        "fold": 2,
+        "train_samples": 46,
+        "test_samples": 46,
+        "accuracy": 0.9565,
+        "f1_macro": 0.592,
+        "precision_macro": 0.5846,
+        "recall_macro": 0.6
+      }
+    ],
+    "performance": {
+      "inference_latency_microseconds": 305.85,
+      "throughput_samples_per_second": 3269.6
+    },
+    "methodological_caveats": [
+      "Evaluation was performed via Stratified Cross-Validation with disjoint train/test folds.",
+      "Dataset consists of 92 PCAP-derived flows from synthetic scenarios and is NOT representative of internet-scale enterprise variance.",
+      "Minority classes (BENIGN, MALWARE_HTTP) have only 2 samples; confidence intervals on minority recall are wide.",
+      "Previous reported 100% metrics reflected resubstitution on the training set and have been superseded."
+    ],
+    "dataset_metadata": {
+      "dataset_id": "PCAP-DERIVED-FLOWS-v1",
+      "samples": 92,
+      "schema": "2.0.0"
+    }
+  },
+  {
+    "experiment_id": "EXP-HGB-CV-01",
+    "model_name": "NIDS-HistGradientBoosting",
+    "version": "2.0.0",
+    "algorithm": "hist_gradient_boosting",
+    "evaluation_type": "STRATIFIED_CROSS_VALIDATION",
+    "evaluated_at": "2026-11-23T02:53:38Z",
+    "total_samples": 92,
+    "n_folds": 2,
+    "fold_adaptation_reason": "Fold count adapted from 5 to 2 because minority class has only 2 samples.",
+    "metrics": {
+      "accuracy": 0.6957,
+      "accuracy_std": 0.0,
+      "f1_macro": 0.3334,
+      "f1_macro_std": 0.0047,
+      "precision_macro": 0.286,
+      "precision_std": 0.0069,
+      "recall_macro": 0.4,
+      "recall_std": 0.0,
+      "false_positive_rate": 0.0963,
+      "false_negative_rate": 0.6,
+      "roc_auc": null,
+      "pr_auc": null
+    },
+    "class_metrics": {
+      "BENIGN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "total_samples": 2
+      },
+      "C2_BEACON": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "total_samples": 24
+      },
+      "DNS_TUNNEL": {
+        "precision": 0.7273,
+        "recall": 1.0,
+        "f1_score": 0.8421,
+        "total_samples": 24
+      },
+      "MALWARE_HTTP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "total_samples": 2
+      },
+      "PORT_SCAN": {
+        "precision": 0.7018,
+        "recall": 1.0,
+        "f1_score": 0.8247,
+        "total_samples": 40
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "BENIGN",
+        "C2_BEACON",
+        "DNS_TUNNEL",
+        "MALWARE_HTTP",
+        "PORT_SCAN"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          16
+        ],
+        [
+          0,
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ]
+    },
+    "fold_results": [
+      {
+        "fold": 1,
+        "train_samples": 46,
+        "test_samples": 46,
+        "accuracy": 0.6957,
+        "f1_macro": 0.3381,
+        "precision_macro": 0.2929,
+        "recall_macro": 0.4
+      },
+      {
+        "fold": 2,
+        "train_samples": 46,
+        "test_samples": 46,
+        "accuracy": 0.6957,
+        "f1_macro": 0.3288,
+        "precision_macro": 0.2791,
+        "recall_macro": 0.4
+      }
+    ],
+    "performance": {
+      "inference_latency_microseconds": 254.31,
+      "throughput_samples_per_second": 3932.2
+    },
+    "methodological_caveats": [
+      "Evaluation was performed via Stratified Cross-Validation with disjoint train/test folds.",
+      "Dataset consists of 92 PCAP-derived flows from synthetic scenarios and is NOT representative of internet-scale enterprise variance.",
+      "Minority classes (BENIGN, MALWARE_HTTP) have only 2 samples; confidence intervals on minority recall are wide.",
+      "Previous reported 100% metrics reflected resubstitution on the training set and have been superseded."
+    ],
+    "dataset_metadata": {
+      "dataset_id": "PCAP-DERIVED-FLOWS-v1",
+      "samples": 92,
+      "schema": "2.0.0"
+    }
+  }
+]

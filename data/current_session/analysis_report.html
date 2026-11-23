@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPI & Network Security Analysis Report</title>
+  <style>
+    :root { --bg: #090d16; --card-bg: #111827; --card-border: #1f293d; --text: #f3f4f6; --text-muted: #9ca3af; --primary: #38bdf8; --danger: #ef4444; --warning: #f59e0b; --success: #10b981; }
+    body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    header { border-bottom: 1px solid var(--card-border); padding-bottom: 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    h1 { margin: 0; font-size: 24px; font-weight: 700; color: var(--primary); }
+    .subtitle { color: var(--text-muted); font-size: 14px; margin-top: 4px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 16px; }
+    .stat-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+    .stat-value { font-size: 28px; font-weight: 700; color: var(--text); margin-top: 6px; }
+    .nav-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--card-border); margin-bottom: 24px; }
+    .tab-btn { background: none; border: none; color: var(--text-muted); padding: 10px 16px; font-size: 14px; font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+    .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+    .card-title { font-size: 18px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    th { background: #1a2234; padding: 10px 12px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--card-border); }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--card-border); }
+    tr:hover td { background: #151e30; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .badge-critical { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; }
+    .badge-high { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid #f59e0b; }
+    .badge-medium { background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8; }
+    .badge-low { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; }
+    .badge-clean { background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid #9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>DPI Engine & Network Security Analysis</h1>
+        <div class="subtitle">Target PCAP: <strong>/Users/akshitamehra/Documents/Packet_analyzer-main/test_dpi.pcap</strong> | Engine: v1.0 (Phase 3.8)</div>
+      </div>
+      <div style="text-align: right; font-size: 12px; color: var(--text-muted);">
+        <div>Analyzed Traffic: 5738 bytes (77 packets)</div>
+        <div>Active Flows: 27 | Distinct Endpoints: 22</div>
+      </div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Total Packets</div>
+        <div class="stat-value">77</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Total Flows</div>
+        <div class="stat-value">27</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Security Incidents</div>
+        <div class="stat-value" style="color: var(--danger);">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Threat IOC Matches</div>
+        <div class="stat-value" style="color: var(--warning);">2</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Behavioral Alerts</div>
+        <div class="stat-value">2</div>
+      </div>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="showTab('executive')">Executive Summary</button>
+      <button class="tab-btn" onclick="showTab('traffic')">Traffic & Endpoints</button>
+      <button class="tab-btn" onclick="showTab('incidents')">Security Incidents (3)</button>
+      <button class="tab-btn" onclick="showTab('threats')">Threat Intel (2)</button>
+      <button class="tab-btn" onclick="showTab('investigations')">Investigations (1)</button>
+    </div>
+
+    <div id="executive" class="tab-pane active">
+      <div class="card">
+        <div class="card-title">Executive Overview & Security Posture</div>
+        <p>This automated Deep Packet Inspection analysis performed deep stateful flow reconstruction, behavioral anomaly detection, signature matching, and local threat intelligence enrichment across <strong>77</strong> packets and <strong>27</strong> bidirectional flows.</p>
+        <p>A total of <strong>3</strong> security incident(s) and <strong>2</strong> threat intelligence match(es) were identified.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Top Protocol Volume Distribution</div>
+        <table>
+          <thead><tr><th>Protocol</th><th>Flows</th><th>Packets</th><th>Bytes</th><th>Traffic Share</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Amazon</strong></td><td>1</td><td>4</td><td>300 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Apple</strong></td><td>1</td><td>4</td><td>299 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Cloudflare</strong></td><td>1</td><td>4</td><td>304 B</td><td>5.3%</td></tr>
+            <tr><td><strong>DNS</strong></td><td>4</td><td>4</td><td>300 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Discord</strong></td><td>1</td><td>4</td><td>297 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Facebook</strong></td><td>1</td><td>4</td><td>302 B</td><td>5.3%</td></tr>
+            <tr><td><strong>GitHub</strong></td><td>1</td><td>4</td><td>296 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Google</strong></td><td>1</td><td>4</td><td>300 B</td><td>5.2%</td></tr>
+            <tr><td><strong>HTTP</strong></td><td>2</td><td>4</td><td>368 B</td><td>6.4%</td></tr>
+            <tr><td><strong>Instagram</strong></td><td>1</td><td>4</td><td>303 B</td><td>5.3%</td></tr>
+            <tr><td><strong>Microsoft</strong></td><td>1</td><td>4</td><td>303 B</td><td>5.3%</td></tr>
+            <tr><td><strong>Netflix</strong></td><td>1</td><td>4</td><td>301 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Spotify</strong></td><td>1</td><td>4</td><td>302 B</td><td>5.3%</td></tr>
+            <tr><td><strong>TCP</strong></td><td>5</td><td>5</td><td>270 B</td><td>4.7%</td></tr>
+            <tr><td><strong>Telegram</strong></td><td>1</td><td>4</td><td>302 B</td><td>5.3%</td></tr>
+            <tr><td><strong>TikTok</strong></td><td>1</td><td>4</td><td>300 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Twitter/X</strong></td><td>1</td><td>4</td><td>297 B</td><td>5.2%</td></tr>
+            <tr><td><strong>YouTube</strong></td><td>1</td><td>4</td><td>301 B</td><td>5.2%</td></tr>
+            <tr><td><strong>Zoom</strong></td><td>1</td><td>4</td><td>293 B</td><td>5.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="traffic" class="tab-pane">
+      <div class="card">
+        <div class="card-title">Top Endpoints & Risk Ratings</div>
+        <table>
+          <thead><tr><th>IP Address</th><th>Internal</th><th>Role</th><th>Traffic Volume</th><th>Flows</th><th>Risk Score</th><th>Rating</th></tr></thead>
+          <tbody>
+            <tr><td><code>192.168.1.50</code></td><td>Yes</td><td>CLIENT</td><td>270 B</td><td>5</td><td>47.0</td><td><span class="badge badge-medium">MEDIUM</span></td></tr>
+            <tr><td><code>172.217.0.100</code></td><td>No</td><td>EXTERNAL</td><td>270 B</td><td>5</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>35.186.224.47</code></td><td>No</td><td>EXTERNAL</td><td>302 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>8.8.8.8</code></td><td>No</td><td>EXTERNAL</td><td>300 B</td><td>4</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>93.184.216.34</code></td><td>No</td><td>EXTERNAL</td><td>184 B</td><td>1</td><td>29.0</td><td><span class="badge badge-low">LOW</span></td></tr>
+            <tr><td><code>17.253.144.10</code></td><td>No</td><td>EXTERNAL</td><td>299 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>157.240.1.35</code></td><td>No</td><td>EXTERNAL</td><td>302 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>35.186.227.140</code></td><td>No</td><td>EXTERNAL</td><td>302 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>140.82.114.4</code></td><td>No</td><td>EXTERNAL</td><td>296 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>142.250.185.110</code></td><td>No</td><td>EXTERNAL</td><td>301 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>185.199.108.153</code></td><td>No</td><td>EXTERNAL</td><td>184 B</td><td>1</td><td>4.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>192.168.1.100</code></td><td>Yes</td><td>CLIENT</td><td>5468 B</td><td>22</td><td>85.0</td><td><span class="badge badge-critical">CRITICAL</span></td></tr>
+            <tr><td><code>192.0.78.24</code></td><td>No</td><td>EXTERNAL</td><td>304 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>142.250.185.206</code></td><td>No</td><td>EXTERNAL</td><td>300 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>13.107.42.14</code></td><td>No</td><td>EXTERNAL</td><td>303 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>104.244.42.65</code></td><td>No</td><td>EXTERNAL</td><td>297 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>35.186.224.25</code></td><td>No</td><td>EXTERNAL</td><td>293 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>52.94.236.248</code></td><td>No</td><td>EXTERNAL</td><td>300 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>99.86.0.100</code></td><td>No</td><td>EXTERNAL</td><td>300 B</td><td>1</td><td>27.0</td><td><span class="badge badge-low">LOW</span></td></tr>
+            <tr><td><code>104.16.85.20</code></td><td>No</td><td>EXTERNAL</td><td>297 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>157.240.1.174</code></td><td>No</td><td>EXTERNAL</td><td>303 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+            <tr><td><code>23.52.167.61</code></td><td>No</td><td>EXTERNAL</td><td>301 B</td><td>1</td><td>0.0</td><td><span class="badge badge-clean">CLEAN</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="incidents" class="tab-pane">
+      <div class="card">
+        <div class="card-title">Correlated Security Incidents</div>
+        <table>
+          <thead><tr><th>Incident ID</th><th>Severity</th><th>Score</th><th>Title</th><th>Primary Host</th><th>Correlated Flows</th></tr></thead>
+          <tbody>
+            <tr><td><strong>INC-0001</strong></td><td><span class="badge badge-medium">MEDIUM</span></td><td>30.0</td><td>Network Reconnaissance and Scanning Activity</td><td><code>192.168.1.50</code></td><td>5</td></tr>
+            <tr><td><strong>INC-0002</strong></td><td><span class="badge badge-medium">MEDIUM</span></td><td>40.0</td><td>Suspicious Outbound Communication Channel</td><td><code>192.168.1.50</code></td><td>5</td></tr>
+            <tr><td><strong>INC-0003</strong></td><td><span class="badge badge-high">HIGH</span></td><td>60.0</td><td>Signature-Driven Security Threat Incident</td><td><code>192.168.1.100</code></td><td>3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="threats" class="tab-pane">
+      <div class="card">
+        <div class="card-title">Threat Intelligence Match Events</div>
+        <table>
+          <thead><tr><th>Event ID</th><th>Severity</th><th>IOC Type</th><th>IOC Value</th><th>Observed Host</th><th>Category</th></tr></thead>
+          <tbody>
+            <tr><td>TME-0001</td><td><span class="badge badge-high">HIGH</span></td><td>IPV4</td><td><code>93.184.216.34</code></td><td><code>192.168.1.100 -> 93.184.216.34</code></td><td>KNOWN_MALWARE_HOST</td></tr>
+            <tr><td>TME-0002</td><td><span class="badge badge-medium">MEDIUM</span></td><td>DOMAIN</td><td><code>tiktok.com</code></td><td><code>192.168.1.100 -> 99.86.0.100</code></td><td>POLICY_WATCHLIST</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="investigations" class="tab-pane">
+      <div class="card">
+        <div class="card-title">Active Investigation Workspace</div>
+        <table>
+          <thead><tr><th>ID</th><th>Priority</th><th>Status</th><th>Title</th><th>Evidence Items</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>INV-0001</strong></td><td>HIGH</td><td>OPEN</td><td>Automated Security Investigation - /Users/akshitamehra/Documents/Packet_analyzer-main/test_dpi.pcap</td><td>5</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>

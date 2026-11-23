@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "model_name": "NIDS-HistGradientBoosting",
+  "version": "2.0.0",
+  "algorithm": "hist_gradient_boosting",
+  "artifact_file": "NIDS-HistGradientBoosting_2.0.0.joblib",
+  "sha256": "46f2b5139486258b30b75f57c3a09e025f19d88e8eaee4f6a766f12ee77a5dd8",
+  "is_trained": true,
+  "metadata": {
+    "model_name": "NIDS-HistGradientBoosting",
+    "version": "2.0.0",
+    "algorithm": "hist_gradient_boosting",
+    "trained_at": "2026-11-23T02:53:38Z",
+    "train_duration_seconds": 0.2008,
+    "samples_trained": 92,
+    "feature_count": 24,
+    "classes": [
+      "BENIGN",
+      "C2_BEACON",
+      "DNS_TUNNEL",
+      "MALWARE_HTTP",
+      "PORT_SCAN"
+    ],
+    "feature_importances": {},
+    "dataset_info": {
+      "dataset_id": "PCAP-DERIVED-FLOWS-v1",
+      "samples": 92,
+      "schema": "2.0.0"
+    }
+  }
+}

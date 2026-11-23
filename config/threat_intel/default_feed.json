@@ -1,0 +1,45 @@
+{
+  "dataset_id": "FEED-GLOBAL-IOCS-01",
+  "name": "Default Threat Intelligence & IOC Feed",
+  "version": "1.0",
+  "schema_version": "1.0",
+  "source_description": "Curated threat feed for C2 infrastructure, scanners, and policy watchlists",
+  "iocs": [
+    {
+      "ioc_id": "IOC-EXT-MALWARE-IP",
+      "type": "IPV4",
+      "value": "93.184.216.34",
+      "severity": "HIGH",
+      "category": "KNOWN_MALWARE_HOST",
+      "description": "Observed hosting malware payloads and staging infrastructure",
+      "tags": ["MALWARE", "STAGING"]
+    },
+    {
+      "ioc_id": "IOC-C2-COMMAND-NODE",
+      "type": "IPV4",
+      "value": "198.51.100.44",
+      "severity": "CRITICAL",
+      "category": "C2_SERVER",
+      "description": "Known Command and Control listener endpoint",
+      "tags": ["C2", "BEACON", "ACTIVE"]
+    },
+    {
+      "ioc_id": "IOC-POLICY-TIKTOK",
+      "type": "DOMAIN",
+      "value": "tiktok.com",
+      "severity": "MEDIUM",
+      "category": "POLICY_WATCHLIST",
+      "description": "Monitored social media and streaming domain",
+      "tags": ["POLICY", "BANDWIDTH"]
+    },
+    {
+      "ioc_id": "IOC-DNS-TUNNEL-DOMAIN",
+      "type": "DOMAIN",
+      "value": "tunneling-domain.com",
+      "severity": "HIGH",
+      "category": "DATA_EXFILTRATION",
+      "description": "Domain associated with covert DNS tunneling channels",
+      "tags": ["EXFILTRATION", "TUNNELING"]
+    }
+  ]
+}

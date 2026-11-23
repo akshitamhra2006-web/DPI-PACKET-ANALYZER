@@ -1,0 +1,4 @@
+event_id,schema_version,rule_id,rule_name,category,severity,timestamp_us,src_ip,dst_ip,src_port,dst_port,protocol,direction,flow_id,incident_id,match_scope,match_offset,confidence,evidence
+"SIGEV-0001","1.0","SIG-HTTP-GET","HTTP Inbound GET Request","INFO","LOW",1700000064303244,"192.168.1.100","93.184.216.34",58936,80,"TCP","FORWARD",4294967299,"","STREAM",0,"HIGH","GET / HTTP/1.1\\x0d\\x0aHost"
+"SIGEV-0002","1.0","SIG-HTTP-GET","HTTP Inbound GET Request","INFO","LOW",1700000066063776,"192.168.1.100","185.199.108.153",64312,80,"TCP","FORWARD",4294967300,"","STREAM",0,"HIGH","GET / HTTP/1.1\\x0d\\x0aHost"
+"SIGEV-0003","1.0","SIG-TIKTOK-TRAFFIC","TikTok Domain Traffic","POLICY_VIOLATION","MEDIUM",1700000044824556,"192.168.1.100","99.86.0.100",63971,443,"TCP","FORWARD",12884901891,"","TLS",-1,"HIGH","TLS SNI=www.tiktok.com ALPN="

@@ -1,0 +1,51 @@
+# DPI & Packet Analyzer — Git Ignore Configuration
+# Release: v5.5.0-FINAL
+
+# Compiled Binaries & Build Outputs
+bin/
+build/
+*.o
+*.a
+*.so
+*.dylib
+*.dSYM/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Temporary & Scratch Files
+scratch/
+tmp/
+*.tmp
+*.log
+
+# OS & Editor Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Runtime PCAP output dumps
+data/current_session/*.pcap

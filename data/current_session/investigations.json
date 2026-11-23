@@ -1,0 +1,27 @@
+[
+  {
+  "investigation_id": "INV-0001",
+  "title": "Automated Security Investigation - /Users/akshitamehra/Documents/Packet_analyzer-main/test_dpi.pcap",
+  "description": "Correlated findings from deep packet inspection of /Users/akshitamehra/Documents/Packet_analyzer-main/test_dpi.pcap",
+  "created_at_us": 1795407649145595,
+  "updated_at_us": 1795407649145800,
+  "status": "OPEN",
+  "priority": "HIGH",
+  "tags": ["AUTOMATED_DPI", "TRIAGE"],
+  "related_incidents": ["INC-0001", "INC-0002", "INC-0003"],
+  "related_detections": [],
+  "related_flows": [],
+  "related_endpoints": ["192.168.1.50", "192.168.1.100"],
+  "related_iocs": ["IOC-EXT-MALWARE-IP", "IOC-POLICY-TIKTOK"],
+  "notes": [
+    {"note_id":"NOTE-0001","timestamp_us":1795407649145800,"author":"SYSTEM_TRIAGE","content":"Created automated investigation containing 3 correlated incident(s) and 2 threat intelligence match(es)."}
+  ],
+  "evidence_list": [
+    {"evidence_id":"EV-0001","type":"SECURITY_INCIDENT","source_id":"INC-0001","description":"Network Reconnaissance and Scanning Activity","integrity_hash":"67fcedcea4729e55","timestamp_us":1795407649145670},
+    {"evidence_id":"EV-0002","type":"SECURITY_INCIDENT","source_id":"INC-0002","description":"Suspicious Outbound Communication Channel","integrity_hash":"01309fcb75a24ace","timestamp_us":1795407649145722},
+    {"evidence_id":"EV-0003","type":"SECURITY_INCIDENT","source_id":"INC-0003","description":"Signature-Driven Security Threat Incident","integrity_hash":"00119c860ec4bcae","timestamp_us":1795407649145775},
+    {"evidence_id":"EV-0004","type":"THREAT_IOC","source_id":"IOC-EXT-MALWARE-IP","description":"Destination IP matches threat intelligence indicator [IOC: 93.184.216.34 (KNOWN_MALWARE_HOST/HIGH)]","integrity_hash":"06b90cb78b662f56","timestamp_us":1795407649145789},
+    {"evidence_id":"EV-0005","type":"THREAT_IOC","source_id":"IOC-POLICY-TIKTOK","description":"TLS SNI matches threat intelligence indicator [IOC: tiktok.com (POLICY_WATCHLIST/MEDIUM)]","integrity_hash":"90a24f9890a2d695","timestamp_us":1795407649145799}
+  ]
+}
+]

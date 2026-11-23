@@ -1,0 +1,4 @@
+incident_id,category,severity,confidence,score,first_seen,last_seen,duration_sec,primary_endpoint,related_endpoints_count,related_flows_count,related_detections_count,title,status
+"INC-0001","RECONNAISSANCE","MEDIUM","HIGH",30.00,1700000072648016,1700000076446055,3.7980,"192.168.1.50",1,5,2,"Network Reconnaissance and Scanning Activity","OBSERVED"
+"INC-0002","SUSPICIOUS_OUTBOUND_COMMUNICATION","MEDIUM","MEDIUM",40.00,1700000072648016,1700000076446055,3.7980,"192.168.1.50",1,5,1,"Suspicious Outbound Communication Channel","OBSERVED"
+"INC-0003","SUSPICIOUS_OUTBOUND_COMMUNICATION","HIGH","HIGH",60.00,1700000064303244,1700000044824556,0.0000,"192.168.1.100",3,3,0,"Signature-Driven Security Threat Incident","NEW"
